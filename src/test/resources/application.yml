@@ -1,0 +1,34 @@
+
+server:
+    port: 0
+    servlet:
+        context-path: /api/oauth
+
+spring:
+    data:
+        mongodb:
+            port: 0
+    profiles:
+        active: test
+    redis:
+        host: localhost
+        port: 6370
+    cache:
+        type: REDIS
+        redis:
+            cache-null-values: false
+            time-to-live: 60000
+    h2:
+        console:
+            enabled: true
+            path: /console
+    jooq:
+        sql-dialect: h2
+picpay:
+    service:
+        auth:
+            jwt:
+                secret: dSgUkXp2s5v8y/B?E(H+MbQeThWmYq3t6w9z$C&F)J@NcRfUjXn2r4u7x!A%D*G-
+logging:
+    pattern:
+        console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta([%t]) %m%n"
